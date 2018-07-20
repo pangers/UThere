@@ -6,13 +6,13 @@
 //  Copyright © 2018 Pangers. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MatchedViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .orange
+    @IBAction func looksGoodTapped(_ sender: Any) {
+        let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ConfirmViewController")
+        
+        navigationController?.pushViewController(secondVC, animated: true)
     }
 }
